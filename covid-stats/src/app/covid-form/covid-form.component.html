@@ -1,0 +1,23 @@
+<p-card>
+
+    <h2>Select a country</h2>
+    <div class="grid">
+        <div class="col">
+
+            <p-dropdown id="dropdown" [options]="countries" [(ngModel)]="selectedCountry" placeholder="Select a Country"
+                optionLabel="name" [showClear]="true">
+                <ng-template let-country pTemplate="item">
+                    <div class="country-item">
+                        <div [id]="country.name">{{country.name}}</div>
+                    </div>
+                </ng-template>
+            </p-dropdown>
+        </div>
+
+        <div class="col flex flex-row-reverse">
+            <p-button id="countryBtn" type="button" label="Get stats" [disabled]="!canSubmit()"
+                (click)="handleClick($event)"></p-button>
+        </div>
+    </div>
+
+</p-card>

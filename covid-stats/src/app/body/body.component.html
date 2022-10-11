@@ -1,0 +1,9 @@
+<div>
+<p-card><h1>Covid Statistics</h1></p-card>
+<div class="pt-5 pb-2">
+<app-covid-form></app-covid-form>
+</div>
+<div *ngIf="hasStats">
+<app-covid-stats></app-covid-stats>
+</div>
+</div>

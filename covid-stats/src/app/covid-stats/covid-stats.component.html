@@ -1,0 +1,69 @@
+<p-card>
+
+<h2>Statistics</h2>
+
+<h3>Tests</h3>
+<p-table [value]="tests" responsiveLayout="scroll">
+    <ng-template pTemplate="header">
+        <tr>
+            <th>1M pop</th>
+            <th>Total</th>
+        </tr>
+    </ng-template>
+    <ng-template pTemplate="body" let-test>
+        <tr>
+            <td>{{test['1M_pop']}}</td>
+            <td>{{test.total}}</td>
+        </tr>
+    </ng-template>
+</p-table>
+
+<h3>Cases</h3>
+<p-table [value]="cases" responsiveLayout="scroll">
+    <ng-template pTemplate="header">
+        <tr>
+            <th>New</th>
+            <th>Active</th>
+            <th>Critical</th>
+            <th>Recovered</th>
+            <th>1M pop</th>
+            <th>Total</th>
+        </tr>
+    </ng-template>
+    <ng-template pTemplate="body" let-case>
+        <tr>
+            <td>{{case.new}}</td>
+            <td>{{case.active}}</td>
+            <td>{{case.critical}}</td>
+            <td>{{case.recovered}}</td>
+            <td>{{case['1M_pop']}}</td>
+            <td>{{case.total}}</td>
+        </tr>
+    </ng-template>
+</p-table>
+
+
+<h3>Deaths</h3>
+<p-table [value]="deaths" responsiveLayout="scroll">
+    <ng-template pTemplate="header">
+        <tr>
+            <th>New</th>
+            <th>1M pop</th>
+            <th>Total</th>
+        </tr>
+    </ng-template>
+    <ng-template pTemplate="body" let-death>
+        <tr>
+            <td>{{death.new}}</td>
+            <td>{{death['1M_pop']}}</td>
+            <td>{{death.total}}</td>
+        </tr>
+    </ng-template>
+</p-table>
+
+
+
+
+
+
+</p-card>
